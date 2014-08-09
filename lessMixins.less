@@ -1,0 +1,24 @@
+@page-width: 960px;
+
+.clearfix() {
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+.layer-page(@width: @page-width, @margin: 0 auto){
+    width: @page-width;
+    margin: @margin;
+}
+.transition-delay(@delay: 0.5s){
+    -webkit-transition-delay: @delay;
+    -o-transition-delay: @delay;
+    -moz-transition-delay: @delay;
+    transition-delay: @delay;
+}
